@@ -44,7 +44,9 @@
         "implied_permissions": [],
         "introduced_version": "1.0.0",
         "deprecated": false,
-        "safer_guidance": "Use built-in checks when possible.",
+        "safer_guidance": [
+          "Use built-in checks when possible."
+        ],
         "risk_tier": "low",
         "baseline_floor": "none"
       }

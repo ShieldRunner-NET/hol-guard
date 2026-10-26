@@ -1,6 +1,5 @@
 {
   "schema": "guard.command-extension-fixtures.v1",
-  "extension_id": "command.shieldenv",
   "build": {
     "base": "packaged",
     "schema": "guard.command-extension-build.v1",
@@ -51,7 +50,9 @@
               "implied_permissions": [],
               "introduced_version": "1.0.0",
               "deprecated": false,
-              "safer_guidance": "Use built-in checks when possible.",
+              "safer_guidance": [
+                "Use built-in checks when possible."
+              ],
               "risk_tier": "low",
               "baseline_floor": "none"
             }
@@ -94,7 +95,7 @@
       "expected_action": "review",
       "enabled_extensions": ["command.shieldenv"],
       "disabled_permissions": [],
-      "expected_effective_segments": []
+      "expected_effective_segments": [0]
     },
     {
       "id": "shieldenv_unrelated_command",
