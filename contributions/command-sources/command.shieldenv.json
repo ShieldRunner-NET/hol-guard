@@ -1,93 +1,31 @@
 {
   "extension": {
+    "extension_id": "command.shieldenv",
+    "description": "Provides fast, local-first secret scanning and pre-commit checks via ShieldEnv without modifying core repository configurations.",
+    "homepage": "https://github.com/ShieldRunner-NET/shieldenv",
+    "executables": [
+      "shieldenv"
+    ],
     "action_classes": [
       "local_secret_scan"
     ],
     "aliases": [],
     "conflicts": [],
-    "delegated_protection": null,
     "dependencies": [],
-    "description": "Provides fast, local-first secret scanning and pre-commit checks via ShieldEnv without modifying core repository configurations.",
     "ecosystem_ids": [],
-    "executables": [
-      "shieldenv"
-    ],
-    "extension_id": "command.shieldenv",
-    "homepage": "https://github.com/ShieldRunner-NET/shieldenv",
+    "delegated_protection": null,
     "icon": {
       "kind": "none"
     },
-    "license": "MIT",
-    "name": "ShieldEnv protection",
-    "permissions": [
-      {
-        "action_classes": [
-          "local_secret_scan"
-        ],
-        "baseline_floor": "allow",
-        "configurable": true,
-        "conflicts": [],
-        "default_enabled": false,
-        "dependencies": [],
-        "deprecated": false,
-        "description": "Identifies shieldenv scan operations for local credential detection.",
-        "example_command": "shieldenv scan",
-        "family": "shieldenv-scan",
-        "fixed_reason": null,
-        "implementation_version": "1.0.0",
-        "implied_permissions": [],
-        "introduced_version": "1.0.0",
-        "label": "ShieldEnv scan",
-        "permission_id": "command.shieldenv.permission.scan",
-        "replacement_permission_id": null,
-        "risk_tier": "low",
-        "safer_guidance": [
-          "ShieldEnv runs locally and scans staged files instantly."
-        ],
-        "typed_capabilities": []
-      }
-    ],
-    "project_markers": [
-      "shieldenv.yaml"
-    ],
     "publisher": {
       "name": "ShieldRunner-NET",
-      "github_id": 1
+      "contact": "support@shieldrunner.net"
     },
-    "reference_urls": [],
-    "required": false,
-    "risk_classes": [
-      "local_secret_read"
-    ],
-    "rules": [
-      {
-        "action_classes": [
-          "local_secret_scan"
-        ],
-        "default_mode": "disabled",
-        "description": "Identifies shieldenv scan execution.",
-        "family": "shieldenv-scan",
-        "matcher": null,
-        "native_capability": "command.shieldenv.scan.v1",
-        "permission_id": "command.shieldenv.permission.scan",
-        "risk_classes": [
-          "local_secret_read"
-        ],
-        "rule_id": "command.shieldenv.scan",
-        "rule_version": "1.0.0",
-        "safe_variants": [],
-        "safer_alternatives": [
-          "Ensure local-first execution and run scans on staged changes."
-        ],
-        "severity": "low",
-        "title": "ShieldEnv scan"
+    "native_capability": {
+      "watcher": "command.shieldenv.scan.v1",
+      "matcher": {
+        "subcommand": "scan"
       }
-    ],
-    "safer_alternatives": [
-      "Use shieldenv scan to verify staged files before committing."
-    ],
-    "source": "community",
-    "version": "1.0.0"
-  },
-  "schema": "guard.command-extension-source.v1"
+    }
+  }
 }
