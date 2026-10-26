@@ -39,6 +39,19 @@
           "permissions": [
             {
               "permission_id": "command.shieldenv.permission.scan",
+              "implementation_version": "1.0.0",
+              "label": "ShieldEnv Scan Permission",
+              "description": "Allows executing local secret scanning commands via ShieldEnv.",
+              "default_enabled": true,
+              "configurable": true,
+              "typed_capabilities": [],
+              "action_classes": ["local_secret_scan"],
+              "dependencies": [],
+              "conflicts": [],
+              "implied_permissions": [],
+              "introduced_version": "1.0.0",
+              "deprecated": false,
+              "safer_guidance": "Use built-in checks when possible.",
               "risk_tier": "low",
               "baseline_floor": "none"
             }
