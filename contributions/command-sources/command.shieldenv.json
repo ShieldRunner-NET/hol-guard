@@ -1,4 +1,28 @@
 {
+  "schema": "guard.command-extension-source.v1",
+  "name": "shieldenv",
+  "version": "1.0.0",
+  "license": "MIT",
+  "source": "built-in",
+  "required": false,
+  "risk_classes": ["low"],
+  "permissions": {
+    "default_enabled": true,
+    "network": false,
+    "filesystem": "read-only"
+  },
+  "rules": [
+    {
+      "id": "shieldenv_scan",
+      "matcher": {
+        "leading-subcommand.v1": {
+          "executables": ["shieldenv", "shieldenv.exe", "shieldenv.cmd"],
+          "subcommand": "scan"
+        }
+      },
+      "action": "allow"
+    }
+  ],
   "extension": {
     "extension_id": "command.shieldenv",
     "description": "Provides fast, local-first secret scanning and pre-commit checks via ShieldEnv without modifying core repository configurations.",
@@ -18,14 +42,11 @@
       "kind": "none"
     },
     "publisher": {
-      "name": "ShieldRunner-NET",
-      "contact": "support@shieldrunner.net"
-    },
-    "native_capability": {
-      "watcher": "command.shieldenv.scan.v1",
-      "matcher": {
-        "subcommand": "scan"
-      }
+      "display_name": "Community",
+      "id": "community.shieldrunner-net",
+      "url": "https://github.com/ShieldRunner-NET/shieldenv"
     }
-  }
+  },
+  "project_markers": [],
+  "safer_alternatives": []
 }
