@@ -89,5 +89,52 @@
         }
       }
     ]
-  }
+  },
+  "trust": {
+    "schemaVersion": "guard.extension-trust-class-map.v1",
+    "publishers": {
+      "hol": {
+        "displayName": "Hashgraph Online",
+        "id": "hol"
+      }
+    },
+    "classes": {
+      "external": [
+        "command.apex",
+        "command.drip",
+        "command.shieldenv",
+        "command.ollama"
+      ],
+      "first-party": [
+        "command.container-runtime",
+        "command.filesystem",
+        "command.git",
+        "command.system"
+      ],
+      "trusted-library": [
+        "command.github",
+        "command.remote.ssh"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "id": "shieldenv_scan_matching",
+      "rule_id": "command.shieldenv.scan",
+      "command": "shieldenv scan --path contributions/",
+      "expected_action": "review",
+      "enabled_extensions": ["command.shieldenv"],
+      "disabled_permissions": [],
+      "expected_effective_segments": [0]
+    },
+    {
+      "id": "shieldenv_unrelated_command",
+      "rule_id": "command.shieldenv.scan",
+      "command": "echo hello",
+      "expected_action": "allow",
+      "enabled_extensions": ["command.shieldenv"],
+      "disabled_permissions": [],
+      "expected_effective_segments": []
+    }
+  ]
 }
