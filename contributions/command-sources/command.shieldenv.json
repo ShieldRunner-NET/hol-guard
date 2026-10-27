@@ -48,7 +48,8 @@
           "Use built-in checks when possible."
         ],
         "risk_tier": "low",
-        "baseline_floor": "none"
+        "baseline_floor": "review",
+        "example_command": "shieldenv scan --path contributions/"
       }
     ],
     "rules": [
@@ -75,7 +76,9 @@
       }
     ],
     "project_markers": [],
-    "safer_alternatives": [],
+    "safer_alternatives": [
+      "Use built-in checks when possible."
+    ],
     "reference_urls": []
   }
 }
