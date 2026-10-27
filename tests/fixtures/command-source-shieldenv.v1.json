@@ -96,6 +96,10 @@
       "hol": {
         "displayName": "Hashgraph Online",
         "id": "hol"
+      },
+      "hol-curated": {
+        "displayName": "HOL curated library",
+        "id": "hol-curated"
       }
     },
     "classes": {
