@@ -2,7 +2,7 @@
   "baseline_program_digest": "76e8606727ac22aec5f1e7f07f83ee8107acc709b28e52d09c09906ca2ded031",
   "baseline_source_sha": "a9ede76dfbc17ca54bc568a352f06e4add41d701",
   "candidate_program_digest": "ba0b9da91225c7fd86e8c0a952c7e383ad859fc04cca6f39c592010961d8faa9",
-  "command_sources": 69,
+  "command_sources": 70,
   "files": {
     "command.api-gateway.json": "c435d78e882f941c989aa097e875b0c61dafbd13523f515b03f1d967636031aa",
     "command.backup.borg.json": "a0db5957159d3ae5d7cf685f6de19433f7cb1d584ed4560b816c48de135de158",
@@ -65,6 +65,7 @@
     "command.remote.ssh.json": "cf86c7ebc8dddb3f151b48bc370abea53c7a0e35710c2758e206ad8e0873f69a",
     "command.repo2nb.json": "e80f3d3f23ff847d3799a7cd48074ffb3cac1ed00a8c000774f9683189fe1bce",
     "command.search.elasticsearch.json": "2723d7098ebae8b445ec3304682caa1c8398b4725b071c736c5fd6cf1c827708",
+    "command.shieldenv.json": "c5e22bd5747da4c4b6c1d1b8636bc8ba99731b032b4d65a085f9610ff86ec8b0",
     "command.shell-mutations.json": "1e37ec37e744dbce7037b59b583f4e52d747b9fd849d5b30c30d2ef30c7d8f03",
     "command.skill-sunset.json": "8d467a2e555278f50911e1b69f9970ebbd9ef90a02897b12436c89042fd69cc4",
     "command.storage.aws-s3.json": "93945f26e8884e8e6de0851927b466420615e53a74e85af3698ffd5d30579b4a",
