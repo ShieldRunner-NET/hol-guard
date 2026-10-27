@@ -3,6 +3,14 @@
   "build": {
     "base": "packaged",
     "schema": "guard.command-extension-build.v1",
+    "trust": {
+      "schema": "guard.extension-trust-class-map.v1",
+      "classes": {
+        "external": [
+          "command.shieldenv"
+        ]
+      }
+    },
     "sources": [
       {
         "schema": "guard.command-extension-source.v1",
